@@ -1,0 +1,75 @@
+.header {
+    position: fixed; /*  Keeps header at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e4e0e0;
+    color: rgb(41, 34, 34);
+    padding: 1px 20px;
+    z-index: 1000; /* Ensures it stays above other elements */
+    box-shadow: 1px 1px 13px gray;
+}
+
+/*  Navigation Links */
+.header nav {
+    display: flex;
+    align-items: center;
+}
+
+.header h1{
+    color: #72110c;
+}
+
+/*  Home & Cart Buttons */
+.header nav a {
+    color: rgb(29, 22, 22);
+    margin: 0 20px; /* Reduced margin for better spacing */
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+/*  Hover Effect */
+.header nav a:hover {
+    background: rgba(204, 94, 255, 0.2);
+    color: rgb(89, 119, 64);
+}
+
+/*  Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+
+    
+.header h1{
+    color: #FF3B30;
+}
+    .header nav {
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .header nav a {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+        margin: 5px auto;
+    }
+}
+
+/*  Ensures content does not go behind the fixed header */
+body {
+    padding-top: 60px; /* Adjust this value if needed */
+}
+
+  

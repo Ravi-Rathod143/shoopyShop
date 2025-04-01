@@ -32,6 +32,9 @@ https://shoppyshops.netlify.app/
 ## github clone the repository
 https://github.com/Ravi-Rathod143/shoopyShop.git
 
+## folder
+cd shoppyglobe
+
 ## Install the dependency
 npm install
 

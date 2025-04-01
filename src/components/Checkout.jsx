@@ -4,8 +4,8 @@ import "./Checkout.css"; // Importing CSS for styling the Checkout component
 import { useState } from "react";
 const Checkout = () => {
   // ✅ Proper state selection: Extracting cart data from Redux store
-  const [isPlaced, setIsPlaced] = useState(false)
-  const cart = useSelector((state) => state.cart.cart || []); 
+  const [isPlaced, setIsPlaced] = useState(false);
+  const cart = useSelector((state) => state.cart.cart || []);
 
   console.log("Cart Data:", cart); // Debugging to check cart data in console
 
@@ -21,7 +21,7 @@ const Checkout = () => {
   return (
     <div className="checkout">
       <h2>Checkout</h2>
-      
+
       {/* If cart is empty, display a message */}
       {cart.length === 0 ? (
         <p>Your cart is empty. Add products to continue.</p>
@@ -43,12 +43,12 @@ const Checkout = () => {
           {/* <button className="purchase-btn" onClick={() => alert("Order Placed!")}>
             Place Order
           </button> */}
-           <button
-      className="purchase-btn"
-      onClick={() => setIsPlaced(true)}
-    >
-      {isPlaced ? "😊 Placed" : "Place Order"}
-    </button>
+          <button
+            className={`purchase-btn ${isPlaced ? "placed-btn" : ""}`}
+            onClick={() => setIsPlaced(true)}
+          >
+            {isPlaced ? "😊 Placed 😊" : "Place Order"}
+          </button>
         </>
       )}
     </div>

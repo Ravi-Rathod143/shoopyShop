@@ -64,6 +64,15 @@
     margin-top: 15px;
   }
 
+  .placed-btn {
+    color: white; /* Change text color */
+    border: 2px solid rgb(10, 151, 245);
+    /* transition: background 0.1s ease, color 0.3s ease; */
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+
   @media (max-width: 1024px) {
     .checkout {
         max-width: 80%;

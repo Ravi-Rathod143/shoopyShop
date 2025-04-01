@@ -96,4 +96,16 @@
     }
 }
 
+@media (max-width: 400px) {  /* Specifically for iPhone SE & small devices */
+    .load {
+        margin-top: 190px;  /* Reduced margin to fit smaller screens */
+        color: #5f130f;
+    }
+}
+
+@media (max-width: 600px) {  /* For slightly larger phones */
+    .load {
+        margin-top: 190px;  /* Adjusted for better alignment */
+    }
+}
 

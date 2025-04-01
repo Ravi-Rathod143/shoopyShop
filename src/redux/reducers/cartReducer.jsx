@@ -1,7 +1,7 @@
 // Import action types from the actions file
 import { ADD_TO_CART, REMOVE_FROM_CART } from "../actions/cartActions";
 
-// Load cart data from localStorage (जर असेल तर)
+// Load cart data from localStorage 
 const initialState = {
   cart: JSON.parse(localStorage.getItem("cart")) || [],
 };

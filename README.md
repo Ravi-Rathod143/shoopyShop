@@ -27,7 +27,7 @@ ShoppyGlobe is a simple yet powerful e-commerce web application built using Reac
 ✔️ Responsive UI: Works on mobile, tablets, and desktops
 
 ## live demo Link website
-https://shoppyshops.netlify.app/
+https://onlineshopsy.netlify.app/
 
 ## github clone the repository
 https://github.com/Ravi-Rathod143/shoopyShop.git

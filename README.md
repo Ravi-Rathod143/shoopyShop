@@ -22,6 +22,8 @@ ShoppyGlobe is a simple yet powerful e-commerce web application built using Reac
 
 ✔️ Search Functionality: Users can search for products
 
+✔️ Persistent Cart (localStorage): Keeps cart data even after refresh
+
 ✔️ 404 Page: Custom Not Found page for invalid routes as well as retry option are there if product are not found
 
 ✔️ Responsive UI: Works on mobile, tablets, and desktops
@@ -42,6 +44,14 @@ npm install
 npm run dev
 
 
+# 🛒 Redux Store Setup
+The app uses Redux to manage the cart state. The main Redux files include:
+
+redux/actions/cartActions.js (Handles add/remove actions)
+
+redux/reducers/cartReducer.js (Updates cart state)
+
+redux/store.js (Combines reducers and sets up the store)
 
 
 

@@ -1,4 +1,4 @@
-// src/components/CartItem.js
+
 import React from "react"; // Importing React to use JSX and component functionalities
 import { useDispatch } from "react-redux"; // Importing useDispatch to dispatch actions to the Redux store
 import { removeFromCart } from "../redux/actions/cartActions"; // Importing the action to remove an item from the cart

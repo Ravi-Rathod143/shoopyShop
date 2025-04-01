@@ -96,3 +96,9 @@
 }
 }
 
+@media (max-width: 768px) {
+  .product-detail{
+    margin-top: 210px;
+  }
+}
+

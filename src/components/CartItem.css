@@ -36,4 +36,8 @@
       margin-bottom: 10px;
     }
   }
-  
+  @media (max-width: 768px) {
+    .cart-item{
+      margin-top: 190px;
+    }
+}

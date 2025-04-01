@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"; // Importing useSelector to access st
 import "./Checkout.css"; // Importing CSS for styling the Checkout component
 import { useState } from "react";
 const Checkout = () => {
-  // ✅ Proper state selection: Extracting cart data from Redux store
+  //  Proper state selection: Extracting cart data from Redux store
   const [isPlaced, setIsPlaced] = useState(false);
   const cart = useSelector((state) => state.cart.cart || []);
 

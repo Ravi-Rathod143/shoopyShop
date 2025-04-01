@@ -1,19 +1,18 @@
-// src/redux/reducers/cartReducer.js
 
-// ✅ Import action types from the actions file to ensure consistency.
+//  Import action types from the actions file to ensure consistency.
 import { ADD_TO_CART, REMOVE_FROM_CART } from "../actions/cartActions";
 
-// ✅ Define the initial state of the cart.
+//  Define the initial state of the cart.
 // The cart starts as an empty array.
 const initialState = {
   cart: [],
 };
 
-// ✅ Define the cart reducer function
+//  Define the cart reducer function
 // It takes the current state and an action as parameters.
 const cartReducer = (state = initialState, action) => {
   switch (action.type) {
-    // 🎯 Case 1: ADD_TO_CART
+    //  Case 1: ADD_TO_CART
     case ADD_TO_CART: {
       // Check if the product already exists in the cart
       const existingItem = state.cart.find(item => item.id === action.payload.id);
@@ -37,7 +36,7 @@ const cartReducer = (state = initialState, action) => {
       }
     }
 
-    // 🎯 Case 2: REMOVE_FROM_CART
+    //  Case 2: REMOVE_FROM_CART
     case REMOVE_FROM_CART: {
       return {
         ...state,
@@ -51,11 +50,11 @@ const cartReducer = (state = initialState, action) => {
       };
     }
 
-    // 🎯 Default Case: Return the current state if no matching action is found.
+    //  Default Case: Return the current state if no matching action is found.
     default:
       return state;
   }
 };
 
-// ✅ Export the reducer so it can be used in the Redux store.
+//  Export the reducer so it can be used in the Redux store.
 export default cartReducer;

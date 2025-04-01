@@ -15,8 +15,8 @@ const Checkout = () => {
     return <p>Something went wrong! Please try again.</p>;
   }
 
-  // Calculate total price of all items in the cart
-  const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
+  // Calculate total price of all items with quantity in the cart
+  const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return (
     <div className="checkout">
@@ -31,7 +31,7 @@ const Checkout = () => {
           <ul>
             {cart.map((item) => (
               <li key={item.id}>
-                {item.title} - ${item.price}
+                {item.title} - ${item.price} × {item.quantity} = ${item.price * item.quantity}
               </li>
             ))}
           </ul>

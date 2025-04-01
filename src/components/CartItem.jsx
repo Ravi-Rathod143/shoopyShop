@@ -1,24 +1,23 @@
+import React from "react"; // Importing React for creating a component
+import { useDispatch } from "react-redux"; // useDispatch hook to dispatch Redux actions
+import { removeFromCart } from "../redux/actions/cartActions"; // Importing action to remove item from cart
+import PropTypes from "prop-types"; // PropTypes for type-checking props
+import "./CartItem.css"; // Importing CSS for styling
 
-import React from "react"; // Importing React to use JSX and component functionalities
-import { useDispatch } from "react-redux"; // Importing useDispatch to dispatch actions to the Redux store
-import { removeFromCart } from "../redux/actions/cartActions"; // Importing the action to remove an item from the cart
-import PropTypes from "prop-types"; // Importing PropTypes for type checking of props
-import "./CartItem.css"; // Importing CSS for styling the CartItem component
-
+// CartItem Component to display a single product inside the cart
 const CartItem = ({ item }) => {
-  const dispatch = useDispatch(); // Initializing useDispatch hook to dispatch actions
+  const dispatch = useDispatch(); // Getting dispatch function from Redux
 
   return (
-    <div className="cart-item">
-      {/* Displaying the product image */}
-      <img src={item.thumbnail} alt={item.title} />
+    <div className="cart-item"> {/* Container for cart item */}
+      <img src={item.thumbnail} alt={item.title} /> {/* Displaying product image */}
 
-      {/* Displaying product details */}
-      <div className="cart-item-details">
-        <h4>{item.title}</h4> {/* Product title */}
-        <p>${item.price}</p> {/* Product price */}
-
-        {/* Button to remove the item from the cart */}
+      <div className="cart-item-details"> {/* Container for product details */}
+        <h4>{item.title}</h4> {/* Displaying product name */}
+        <p>${item.price}</p> {/* Displaying product price */}
+        <p><strong>Quantity:</strong> {item.quantity}</p> {/* Displaying product quantity in text */}
+        
+        {/* Remove button to delete item from cart */}
         <button onClick={() => dispatch(removeFromCart(item.id))}>
           Remove
         </button>
@@ -27,9 +26,9 @@ const CartItem = ({ item }) => {
   );
 };
 
-// PropTypes to ensure the correct prop type is passed
+// PropTypes to ensure 'item' prop is an object and required
 CartItem.propTypes = {
   item: PropTypes.object.isRequired,
 };
 
-export default CartItem; // Exporting the CartItem component for use in the Cart component
+export default CartItem; // Exporting component for use in other files
